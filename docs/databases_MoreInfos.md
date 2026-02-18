@@ -1,4 +1,4 @@
-# Quelles base de données choisir selon ses objectifs ?
+# Quelle base de données choisir selon ses objectifs ?
 
 - [Faire le bon choix entre MySQL et PostgreSQL](https://www.data-bird.co/blog/postgresql-vs-mysql)
 
