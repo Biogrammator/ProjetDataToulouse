@@ -98,7 +98,7 @@ D'autres infos sont disponibles comme le statut code ou les HTTP headers : [HTTP
 
 ### Problèmes et solutions
 
-Plus d'infos sur les problèmes rencontrés avec l'API et les solutions dans  [/Procédure_API.md]](.\Procédure_API.md)
+Plus d'infos sur les problèmes rencontrés avec l'API et les solutions dans  [/Procédure_API.md]](./Procédure_API.md)
 
 ## Nettoyage des données
 
