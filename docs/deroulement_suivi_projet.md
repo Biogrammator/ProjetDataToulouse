@@ -140,6 +140,10 @@ Pour les gros jeux de données: PySpark / [Polars](https://docs.pola.rs)
 
 [Appropriate Uses For SQLite](https://sqlite.org/whentouse.html)
 
+
+
+Polars a un mode read "eager" et un mode scan "lazy" des fichiers. Le premier oblige a lire tout le dataset tandis que le second le "survole". C'est donc plus rapide si on sait déjà ce que l'on cherche. 
+
 > # Versionnage et préparation de l'environnement de travail
 
 On se base sur ce que l'on va utiliser pou compartimenter au mieux les différents éléments, on pourra toujours refusionner si on fait de trop nombreux répertoires.
@@ -149,6 +153,8 @@ On se base sur ce que l'on va utiliser pou compartimenter au mieux les différen
 Via ~~git ~~Bash.
 
 Pour tenir à jour les notebooks, docs, la data.
+
+[Git Push Local Branch to Remote – How to Publish a New Branch in Git](https://www.freecodecamp.org/news/git-push-local-branch-to-remote-how-to-publish-a-new-branch-in-git/)
 
 # Analyses exploratoires
 
