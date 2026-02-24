@@ -100,7 +100,7 @@ Docker compose se dépatouille ensuite avec.
 <u>Exemple</u>: 
 
 ```
-ervices:
+services:
   postgres:
     image: postgres:16
     ports:
@@ -109,8 +109,6 @@ ervices:
       POSTGRES_PASSWORD: pass
     volumes:
       - pgdata:/var/lib/postgresql/data
-
-
 ```
 
 Important:
@@ -129,6 +127,8 @@ On aura seulement à réactiver ou activer avec:
 docker compose down -v
 docker compose up -d
 ```
+
+Précision : Il faut se trouver dans le dossier ou se trouve le fichier nécessaire au `compose`. 
 
 # Connexion via autres applications
 
@@ -184,11 +184,4 @@ for row in rows:
 # 5️⃣ Fermeture
 cur.close()
 conn.close()
-
 ```
-
-
-
-
-
-

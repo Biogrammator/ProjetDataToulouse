@@ -100,7 +100,35 @@ D'autres infos sont disponibles comme le statut code ou les HTTP headers : [HTTP
 
 Plus d'infos sur les problèmes rencontrés avec l'API et les solutions dans  [/Procédure_API.md](./Procédure_API.md)
 
-## Nettoyage des données
+# Importation des données
+
+A partir de l'API. Les données non renseignées pour les genres et espèces, en ce qui concerne le dataset Arbres,  sont supprimées (3000 environ pour 120 000 restants)
+
+Faites avec polar
+
+Sauvegarde au format parquet (léger) et csv.
+
+
+
+# Mise en base de données PostgreSQL
+
+On définit le USER et le Mot de passe de la base (sous windows dans le Powershell) via (ici c'est un exemple): 
+
+```
+setx PG_USER "user"
+setx PG_PASSWORD "password"
+```
+
+On les récupère ensuite via python avec:
+
+```
+user = os.environ["PG_USER"]
+password = os.environ["PG_PASSWORD"]
+```
+
+ 
+
+# Nettoyage des données
 
 Plusieurs options : 
 
@@ -109,6 +137,10 @@ Plusieurs options :
 - Utilisation de Python seuleument ?
 
 - Aurtres ?
+
+<u>Fait :</u>
+
+Utilisation de Open Refine pour modifier les coquilles, les mauvais noms, les doublons, ...
 
 ## Infos : License des données
 
@@ -127,8 +159,6 @@ Pour pouvoir mettre en place une **pipeline** ETL , les données doivent s'y pr�
 4) Envoi vers système cible
    
    Tout cela sous une orchestration et plannification.
-   
-   <u>Exemple</u>:  
 
 ### Package python indispensable
 
@@ -139,8 +169,6 @@ requests /sqlalchemy/ psycopg2-binary / pandas /sqlite3/ => exemple: pip install
 Pour les gros jeux de données: PySpark / [Polars](https://docs.pola.rs)
 
 [Appropriate Uses For SQLite](https://sqlite.org/whentouse.html)
-
-
 
 Polars a un mode read "eager" et un mode scan "lazy" des fichiers. Le premier oblige a lire tout le dataset tandis que le second le "survole". C'est donc plus rapide si on sait déjà ce que l'on cherche. 
 
