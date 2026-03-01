@@ -1,0 +1,439 @@
+[
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "text",
+          "name": "espece",
+          "columnName": "espece",
+          "query": "chono",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "espece",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "tchonoskii"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tschonoskii"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne espece"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "espece",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "kagayamae",
+          "kagayame"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "kagayamae"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne espece"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "espece",
+          "expression": "value",
+          "columnName": "espece",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "trichotonum",
+                "l": "trichotonum"
+              }
+            },
+            {
+              "v": {
+                "v": "trichotomum",
+                "l": "trichotomum"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famille",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          ""
+        ],
+        "fromBlank": true,
+        "fromError": false,
+        "to": "Lamiacees"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne famille"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "espece",
+          "expression": "value",
+          "columnName": "espece",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "trichotonum",
+                "l": "trichotonum"
+              }
+            },
+            {
+              "v": {
+                "v": "trichotomum",
+                "l": "trichotomum"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famille",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fabacees"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lamiacees"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne famille"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "espece",
+          "expression": "value",
+          "columnName": "espece",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "trichotonum",
+                "l": "trichotonum"
+              }
+            },
+            {
+              "v": {
+                "v": "trichotomum",
+                "l": "trichotomum"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "espece",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "trichotonum"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "trichotomum"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne espece"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "espece",
+          "expression": "value",
+          "columnName": "espece",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "canadensis",
+                "l": "canadensis"
+              }
+            },
+            {
+              "v": {
+                "v": "x.canadensis",
+                "l": "x.canadensis"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "genre",
+          "columnName": "genre",
+          "query": "Amelanchier",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famille",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Oleacees"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rosacees"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne famille"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "espece",
+          "expression": "value",
+          "columnName": "espece",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "canadensis",
+                "l": "canadensis"
+              }
+            },
+            {
+              "v": {
+                "v": "x.canadensis",
+                "l": "x.canadensis"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "genre",
+          "columnName": "genre",
+          "query": "Amelanchier",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famille",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Fabacees"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rosacees"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne famille"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "espece",
+          "expression": "value",
+          "columnName": "espece",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "canadensis",
+                "l": "canadensis"
+              }
+            },
+            {
+              "v": {
+                "v": "x.canadensis",
+                "l": "x.canadensis"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "text",
+          "name": "genre",
+          "columnName": "genre",
+          "query": "cercis",
+          "mode": "text",
+          "caseSensitive": false,
+          "invert": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famille",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Palmacees"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fabacees"
+      }
+    ],
+    "description": "Modification en masse des cellules de la colonne famille"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "espece",
+          "expression": "value",
+          "columnName": "espece",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "x.intermedia",
+                "l": "x.intermedia"
+              }
+            },
+            {
+              "v": {
+                "v": "intermedia",
+                "l": "intermedia"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "espece",
+    "expression": "cell.recon.match.id",
+    "onError": "set-to-blank",
+    "newColumnName": "hybride",
+    "columnInsertIndex": 6,
+    "description": "Créer la colonne hybride à lindex {1} sur la base de la colonne {2} à laide de lexpression {3}"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "hybride",
+    "description": "Supprimer la colonne hybride"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "espece",
+          "expression": "value",
+          "columnName": "espece",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "x.intermedia",
+                "l": "x.intermedia"
+              }
+            },
+            {
+              "v": {
+                "v": "intermedia",
+                "l": "intermedia"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "espece",
+    "expression": "jython:return \"oui\" if value == \"x.intermedia\" else \"non\"",
+    "onError": "set-to-blank",
+    "newColumnName": "hybride",
+    "columnInsertIndex": 6,
+    "description": "Créer la colonne hybride à lindex {1} sur la base de la colonne {2} à laide de lexpression {3}"
+  }
+]

@@ -12,7 +12,15 @@ Il se base sur les emprunts de la bibliothèque.
 
 On se place dans *~/Documents/Python/projet/AnalyseDataToulouse*
 
+.
+
 # Choix des données
+
+## Infos : License des données
+
+Info ici :  [outils data &mdash; Open Data Toulouse Metropole](https://data.toulouse-metropole.fr/page/outils/).
+
+## Description des données
 
 Données issues de Toulouse Metropole dispo sur https://data.toulouse-metropole.fr/explore/dataset
 
@@ -28,6 +36,8 @@ Les datasets potentiels sont pour le moments :
 - [Nombre d&#x27;arrêtés de catastrophes naturelles - pour visulisation &mdash; Open Data Toulouse Metropole](https://data.toulouse-metropole.fr/explore/dataset/nombre-darretes-de-catastrophes-naturelles-copie/) (voir juste inondation pour faire le lien avec les arbres)
 - [37 Station météo Toulouse université Paul Sabatier &mdash; Open Data Toulouse Metropole](https://data.toulouse-metropole.fr/explore/dataset/37-station-meteo-toulouse-universite-paul-sabatier/) <mark>Beaucoup de données</mark>
 - [Arbres urbains &mdash; Open Data Toulouse Metropole](https://data.toulouse-metropole.fr/explore/dataset/arbres-urbains) A l'air intéressant, grand jdd, avec du **géospatial** aussi mais attention aux erreurs de dataset [voir les commentaires](https://data.toulouse-metropole.fr/explore/dataset/arbres-urbains/comments/)
+
+.
 
 ## Chargement des données
 
@@ -108,8 +118,6 @@ Faites avec polar
 
 Sauvegarde au format parquet (léger) et csv.
 
-
-
 # Mise en base de données PostgreSQL
 
 On définit le USER et le Mot de passe de la base (sous windows dans le Powershell) via (ici c'est un exemple): 
@@ -126,25 +134,29 @@ user = os.environ["PG_USER"]
 password = os.environ["PG_PASSWORD"]
 ```
 
- 
-
-# Nettoyage des données
+# Nettoyage des données (OpenRefine, Python)
 
 Plusieurs options : 
 
-- Utilisation de OpenRefine ? Sur GithUb, inspiré de Google refine. (Suppression de doublon, correction syntaxe, **facet**)
+- OpenRefine ? Dispo sur GithUb, inspiré de Google refine. (Suppression de doublon, correction syntaxe, **facet**)
 
-- Utilisation de Python seuleument ?
+Utilisation de **Open Refine** pour modifier les coquilles, les mauvais noms, les doublons, ...
 
-- Aurtres ?
+Pour le faire: Lancement de PostgreSQL avec Docker puis connexion via OpenRefine sur le même port ([voir ici](../scripts/OpenRefine_Data_Arbres.ipynb))
 
-<u>Fait :</u>
+- On harmonises les noms d'espèces et de genres.
+- Au final 53 individus n'ont pas de noms d'espèces mais on un nom de genre defini.
+- "0_esp" présent comme noms d'espèces (936)  et "0_espece_hors_liste" (5). Quelle signification?
+- 3510 observations de "sp.". ici le genre est connu mais pas l'espèce?
+- "*tchonoskii*"" devient "*tschonoskii*"
+- "*kagayame*" devient "*kagayamae*"
+- *Clerodendron trichotomum* (changement pour les trichoto<mark>n</mark>um): correction pour la famille (Fabacees,Palmacees) qui devient Lamiacees.
+- Tous les *Amelanchier canadensis* ont leur genre homogénéisé. Passage de Oleacee et Fabacees à Rosacees.
+- *cercis canadenssis* : La famille s'accorde pour Fabacees (et non Palmacees)
+- *aquifolium* : homogénéisation
+- *Sorbus x.intermedia* ou *Sorbus intermedia* : même chose ?
 
-Utilisation de Open Refine pour modifier les coquilles, les mauvais noms, les doublons, ...
-
-## Infos : License des données
-
-Info ici :  [outils data &mdash; Open Data Toulouse Metropole](https://data.toulouse-metropole.fr/page/outils/).
+.
 
 # Mise en place de la chaîne ETL
 
@@ -159,6 +171,8 @@ Pour pouvoir mettre en place une **pipeline** ETL , les données doivent s'y pr�
 4) Envoi vers système cible
    
    Tout cela sous une orchestration et plannification.
+   
+   .
 
 ### Package python indispensable
 
@@ -172,7 +186,9 @@ Pour les gros jeux de données: PySpark / [Polars](https://docs.pola.rs)
 
 Polars a un mode read "eager" et un mode scan "lazy" des fichiers. Le premier oblige a lire tout le dataset tandis que le second le "survole". C'est donc plus rapide si on sait déjà ce que l'on cherche. 
 
-> # Versionnage et préparation de l'environnement de travail
+.
+
+# Versionnage et préparation de l'environnement de travail
 
 On se base sur ce que l'on va utiliser pou compartimenter au mieux les différents éléments, on pourra toujours refusionner si on fait de trop nombreux répertoires.
 
@@ -183,6 +199,8 @@ Via ~~git ~~Bash.
 Pour tenir à jour les notebooks, docs, la data.
 
 [Git Push Local Branch to Remote – How to Publish a New Branch in Git](https://www.freecodecamp.org/news/git-push-local-branch-to-remote-how-to-publish-a-new-branch-in-git/)
+
+.
 
 # Analyses exploratoires
 
