@@ -139,8 +139,15 @@ password = os.environ["PG_PASSWORD"]
 Plusieurs options : 
 
 - OpenRefine ? Dispo sur GithUb, inspiré de Google refine. (Suppression de doublon, correction syntaxe, **facet**)
+- Python (polar; dask,sql alchemy) 
 
-Utilisation de **Open Refine** pour modifier les coquilles, les mauvais noms, les doublons, ...
+
+
+### 
+
+### <u>OpenRefine</u>
+
+<u></u>Utilisation de **Open Refine** pour modifier les coquilles, les mauvais noms, les doublons, ...
 
 Pour le faire: Lancement de PostgreSQL avec Docker puis connexion via OpenRefine sur le même port ([voir ici](../scripts/OpenRefine_Data_Arbres.ipynb))
 
@@ -156,7 +163,21 @@ Pour le faire: Lancement de PostgreSQL avec Docker puis connexion via OpenRefine
 - *aquifolium* : homogénéisation
 - *Sorbus x.intermedia* ou *Sorbus intermedia* : même chose ?
 
-.
+
+
+### <u>Problèmes de Open Refine</u> :
+
+Au final on doit exporter les modifications en CSV, cela n'est pas faisable pour des jeux de données volumineux.
+
+
+
+### Avec Python (Panda,polar,dask)
+
+Utilisation directe de dask avec les databases sql:  [Dask Dataframe and SQL &#8212; Dask documentation](https://docs.dask.org/en/stable/dataframe-sql.html)
+
+On fait migrer le nouveau tableau de données CSV obtenus avec Openrefine dans la database via sqlalchemy: [Quickly Load CSVs into PostgreSQL Using Python and Pandas | AustinPoor.com](https://austinpoor.com/blog/csv-to-postgres-with-pandas)
+
+ 
 
 # Mise en place de la chaîne ETL
 
